@@ -188,9 +188,6 @@ void loop() {
 
     if (millis() - lastStepTime > 30) {
       
-      ledcWrite(0, pwmValue);
-      delayMicroseconds(1000); // Czas na przełączenie bramki MOSFET
-
       float current_I = 0.0f;
       float current_V = 0.0f;
       int retries = 0;
@@ -242,6 +239,8 @@ void loop() {
         ledcWrite(0, 0); 
         Serial.println("{\"mode\":\"sweep_end\"}");
       }
+      else
+      ledcWrite(0, pwmValue); // Aktualizacja wartości PWM dla MOSFET
 
       lastStepTime = millis();
     }
