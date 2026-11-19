@@ -54,6 +54,3 @@ python -m PyInstaller --onefile --windowed --name PanelPV app\main.py
 
 Gotowy plik zostanie zapisany w folderze `dist/PanelPV.exe`. Do uruchomienia tego pliku na komputerze użytkownika Python ani dodatkowe biblioteki nie są wymagane.
 
-Przed uruchomieniem należy podłączyć ESP32 i zainstalować odpowiedni sterownik USB, jeśli nie został zainstalowany automatycznie przez system Windows.
-Jeżeli podłączonych jest kilka urządzeń szeregowych i aplikacja nie może jednoznacznie rozpoznać ESP32, wyświetli komunikat z dostępnymi portami.
-Prędkość transmisji `115200` musi być zgodna z konfiguracją programu mikrokontrolera.
